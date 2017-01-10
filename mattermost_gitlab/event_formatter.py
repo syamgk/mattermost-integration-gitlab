@@ -76,7 +76,9 @@ class PushEvent(BaseEvent):
         if len(self.data['commits']) > 0:
             suffix = ':\n'
 
-        text = '%s pushed %s into the `%s` branch for project [%s](%s)%s' % (
+
+            print self.data
+            text = '%s pushed %s into the `%s` branch for project [%s](%s)%s' % (
             self.data['user_name'],
             description,
             self.data['ref'],
